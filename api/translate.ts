@@ -30,7 +30,7 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
           messages: [{ role: "user", content: prompt }],
         }),
       });
-
+//force redeploy
       const data = await response.json();
       const translation = data.choices?.[0]?.message?.content?.trim();
 
